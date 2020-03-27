@@ -59,7 +59,7 @@
             var context = OperationContext.Current;
             var prop = context.IncomingMessageProperties;
             var endpoint = prop[RemoteEndpointMessageProperty.Name] as RemoteEndpointMessageProperty;
-            return endpoint?.Address;
+            return $"{endpoint?.Address}:{endpoint?.Port}";
         }
     }
 }
